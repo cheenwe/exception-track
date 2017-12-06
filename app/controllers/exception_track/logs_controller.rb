@@ -5,7 +5,8 @@ module ExceptionTrack
 
     # GET /exception_logs
     def index
-      @logs = Log.order('id desc').page(params[:page]).per(15)
+      per_page = params[:per_page] || 15
+      @logs = Log.order('id desc').paginate(:page => params[:page], :per_page => per_page)
     end
 
     # GET /exception_logs/1

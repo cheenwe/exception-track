@@ -3,8 +3,8 @@ class CreateExceptionTrackLogs < ActiveRecord::Migration[5.0]
     create_table :exception_tracks do |t|
       t.string :title
       t.text :body
+      t.datetime :created_at
 
-      t.timestamps
     end
   end
 end

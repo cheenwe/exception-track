@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 20170217023900) do
     t.string   "title"
     t.text     "body",       limit: 4294967295
     t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
   end
 
 end
